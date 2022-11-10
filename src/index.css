@@ -1,13 +1,135 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/* 
+  fullforms
+  rlv - relieve
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.rlv-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form.rlv-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+form.rlv-form > div {
+  /* border: 1px solid green; */
+}
+.error {
+  font-size: 12px;
+  color: red;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+/* input[type="date"]:before { */
+/* color: lightgrey; */
+/* content: attr(placeholder) !important; */
+/* margin-right: 0.5em; */
+/* } */
+/* input[type="date"]:focus:before, */
+/* input[type="date"]:not(:focus):([aria-valuenow]):before { */
+/* content: "" !important; */
+/* } */
+input[type="date"]:focus::-webkit-datetime-edit {
+  /* color: transparent; */
+  /* opacity: 0; */
+  /* display: none; */
+}
+/* input[type="date"]::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+input[type="date"]::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+} */
+/* input[type="date"]:focus::-webkit-datetime-edit {
+  color: black;
+}
+/* input[type="date"]::-webkit-datetime-edit {
+  color: transparent;
+} */
+/* input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
+  color: transparent;
+} */
+
+/* input[type="date"]::-webkit-datetime-edit {
+  opacity: 0;
+}
+input[type="date"]:focus::-webkit-datetime-edit {
+  opacity: 1;
+} */
+.radio-wpr {
+  display: flex;
+  gap: 20px;
+}
+.radio-lbl {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.radio-wpr input[type="radio"] {
+  margin-right: 5px;
+}
+.export-btn-cntr {
+  position: relative;
+  overflow: hidden;
+}
+.export-btn-cntr button {
+  width: 100%;
+}
+.export-btn-cntr button::before {
+  content: "";
+  height: 150%;
+  width: 10px;
+  background-color: #fff;
+  opacity: 0.3;
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  transform: rotate(30deg);
+}
+.export-btn-cntr button.animate::before {
+  animation: slideright 3000ms infinite;
+}
+@keyframes slideright {
+  from {
+    right: 100%;
+  }
+}
+.err-popup {
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: #f5efe6;
+  color: #7895b2;
+  position: absolute;
+  top: 30px;
+  animation: slidein 1500ms;
+}
+@keyframes slidein {
+  from {
+    top: 80%;
+  }
 }
